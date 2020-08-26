@@ -8,5 +8,9 @@ export default new VueRouter({
     name: 'home',
     component: () =>
       import ('./views/home.vue')
+  },{
+    path: '/colors',
+    name: 'colors',
+    component: ()=> import ('./views/colors.vue')
   }]
 })
