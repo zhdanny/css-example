@@ -1,10 +1,13 @@
 <template>
-  <div>
-    <loading-circle/>
-    <loading-block/>
-    <loading-barcode/>
-    <loading-bubbles/>
-    <loading-circle-bubbles/>
+  <div class="main">
+    <loading-circle />
+    <loading-block />
+    <loading-barcode />
+    <loading-bubbles />
+    <loading-circle-bubbles />
+    <loading-clue />
+    <loading-spinner />
+    <loading-rotate-clue />
   </div>
 </template>
 <script>
@@ -13,20 +16,29 @@ import loadingBlock from '../components/loading-block'
 import loadingBarcode from '../components/loading-barcode'
 import loadingBubbles from '../components/loading-bubbles'
 import loadingCircleBubbles from '../components/loading-circle-bubbles'
+import loadingClue from '../components/loading-clue'
+import loadingSpinner from '../components/loading-spinner'
+import loadingRotateClue from '../components/loading-rotate-clue'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     loadingCircle,
     loadingBlock,
     loadingBarcode,
     loadingBubbles,
-    loadingCircleBubbles
+    loadingCircleBubbles,
+    loadingClue,
+    loadingSpinner,
+    loadingRotateClue
   },
 
 }
 </script>
 <style lang="scss">
+.main{
+  padding: 30px 60px;
+}
 .zh_title{
   font-size: 14px;
   font-weight: 600;
