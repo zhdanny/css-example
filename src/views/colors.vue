@@ -1,20 +1,43 @@
 <template>
   <div class="colors">
     <div class="color-wrap">
-      <div v-for="(item, index) in menuColors" 
-        :key='`menu${index}`' 
-        class='color-wrap-rgb' 
+      <div 
+        v-for="(item, index) in menuColors" 
+        :key="`menu${index}`"
+        class="color-wrap-rgb"
         :style="`background: ${item.rgb};`" 
         :class="{'color-wrap-rgb-active': index === activeColor}"
-        @click='menuTab(index)'>{{item.name}}</div>
+        @click="menuTab(index)"
+      >
+        {{ item.name }}
+      </div>
     </div>
-    <div v-for='(item, index) in colors' :key='index'>
-      <transition  name="fade" mode="out-in" appear>
-        <div v-if='index === activeColor' class="color-content">
-          <div class="color-li" v-for='(val, i) in item.colors' :key='i' @click="doCopy(val.rgb)">
-            <div class="color-li-rgb" :style="`background: ${val.rgb};`"></div>
-            <span class="color-li-title">{{val.name}} {{val.rgb}}</span>
-            
+    <div 
+      v-for="(item, index) in colors" 
+      :key="index"
+    >
+      <transition  
+        name="fade" 
+        mode="out-in" 
+        appear
+      >
+        <div 
+          v-if="index === activeColor" 
+          class="color-content"
+        >
+          <div
+            v-for="(val, i) in item.colors" 
+            :key="i" 
+            class="color-li" 
+            @click="doCopy(val.rgb)"
+          >
+            <div 
+              class="color-li-rgb" 
+              :style="`background: ${val.rgb};`"
+            ></div>
+            <span class="color-li-title">
+              {{ val.name }} {{ val.rgb }}
+            </span>
           </div>
         </div>
       </transition>
@@ -25,7 +48,7 @@
 <script>
 import { colors, menuColors } from '../config/index'
 export default {
-  name: 'colors',
+  name: "Colors",
   data (){
     return {
       colors, 

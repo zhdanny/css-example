@@ -57,7 +57,7 @@
   </div>
 </template>
 <script>
-import loadingMixins from '../mixins/loading-mixins'
+import loadingMixins from '../../mixins/loading-mixins'
 export default {
   name: 'LoadingSpinner',
   mixins: [loadingMixins]

@@ -11,14 +11,14 @@
   </div>
 </template>
 <script>
-import loadingCircle from '../components/loading-circle'
-import loadingBlock from '../components/loading-block'
-import loadingBarcode from '../components/loading-barcode'
-import loadingBubbles from '../components/loading-bubbles'
-import loadingCircleBubbles from '../components/loading-circle-bubbles'
-import loadingClue from '../components/loading-clue'
-import loadingSpinner from '../components/loading-spinner'
-import loadingRotateClue from '../components/loading-rotate-clue'
+import loadingCircle from '../components/loading/loading-circle'
+import loadingBlock from '../components/loading/loading-block'
+import loadingBarcode from '../components/loading/loading-barcode'
+import loadingBubbles from '../components/loading/loading-bubbles'
+import loadingCircleBubbles from '../components/loading/loading-circle-bubbles'
+import loadingClue from '../components/loading/loading-clue'
+import loadingSpinner from '../components/loading/loading-spinner'
+import loadingRotateClue from '../components/loading/loading-rotate-clue'
 
 export default {
   name: 'Home',

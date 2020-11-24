@@ -6,8 +6,7 @@ export default new VueRouter({
   routes: [{
     path: '/',
     name: 'home',
-    component: () =>
-      import ('./views/home.vue')
+    component: ()=> import ('./views/home.vue')
   },{
     path: '/colors',
     name: 'colors',
@@ -16,5 +15,17 @@ export default new VueRouter({
     path: '/styles',
     name: 'styles',
     component: ()=> import ('./views/styles.vue')
+  },{
+    path: '/filter',
+    name: 'Filters',
+    component: ()=> import ('./views/filter.vue')
+  },{
+    path: '/test',
+    name: 'test',
+    component: () => import ('./views/test.vue')
+  },{
+    path: '/test2',
+    name: 'test2',
+    component: () => import ('./views/test2.vue')
   }]
 })
